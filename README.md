@@ -12,7 +12,7 @@ A collection of interactive exercises for learning **Python Programming** and **
 
 ## 🚀 Live Demo
 Visit the live website here:  
-👉 **[Click to Open Exercises](https://your-username.github.io/your-repo-name/)** *(Please replace the link above with your actual GitHub Pages URL)*
+👉 **[Click to Open Exercises](https://iceez555.github.io/python-quiz/)** *(Please replace the link above with your actual GitHub Pages URL)*
 
 ---
 
