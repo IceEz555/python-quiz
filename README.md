@@ -21,8 +21,8 @@ Visit the live website here:
 | Lab ID | Topic | Description | Status |
 | :--- | :--- | :--- | :--- |
 | **Lab 01** | **Python & Pandas Basics** | String manipulation, Input/Output, and Intro to Pivot Tables. | ✅ Completed |
-| **Lab 02** | **Data Visualization** | Plotting graphs with Matplotlib & Seaborn. | 🚧 Coming Soon |
-| **Lab 03** | **Machine Learning** | Model training basics and deployment concepts. | 🚧 Coming Soon |
+| **Lab 02** | **Coming Soon** | 🚧 Coming Soon | 🚧 Coming Soon |
+| **Lab 03** | **Coming Soon** | 🚧 Coming Soon | 🚧 Coming Soon |
 
 ---
 
