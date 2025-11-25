@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คลังแบบฝึกหัด Python & Data Science</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Prompt', sans-serif; background-color: #f3f4f6; color: #333; margin: 0; padding: 40px 20px; }
+        .container { max-width: 800px; margin: 0 auto; text-align: center; }
+        h1 { color: #2563eb; margin-bottom: 10px; }
+        .subtitle { color: #6b7280; margin-bottom: 40px; }
+        
+        /* Grid Layout for Menu */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .menu-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            border-color: #2563eb;
+        }
+        .icon { font-size: 3rem; margin-bottom: 15px; }
+        .card-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 10px; color: #1f2937; }
+        .card-desc { font-size: 0.9rem; color: #6b7280; }
+        
+        .disabled { opacity: 0.6; cursor: not-allowed; filter: grayscale(100%); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Python & Data Science Exercises</h1>
+    <div class="subtitle">เลือกบทเรียนที่ต้องการฝึกฝน</div>
+
+    <div class="menu-grid">
+        
+        <a href="lab1.html" class="menu-card">
+            <div class="icon"><i class="fa-brands fa-python" style="color: #306998; font-size: 40px;"></i></div>
+            <div class="card-title">Lab 1: Python & Pandas Basic</div>
+            <div class="card-desc">ทบทวนพื้นฐานและการทำ Pivot Table เบื้องต้น</div>
+        </a>
+
+        <a href="lab2.html" class="menu-card ">
+            <div class="icon"><i class="fa-solid fa-repeat" style="color: #e67e22; font-size: 40px;"></i></div>
+            <div class="card-title">Lab 2: Python Conditions & Loops</div>
+            <div class="card-desc">ทบทวนพื้นฐานและการทำเงื่อนไข (If-Else) และการวนซ้ำ (Loops)</div>
+        </a>
+
+        <a href="#" class="menu-card disabled">
+            <div class="icon"></div>
+            <div class="card-title">Lab 3</div>
+            <div class="card-desc">(Coming Soon)</div>
+        </a>
+
+    </div>
+</div>
+
+</body>
+</html>

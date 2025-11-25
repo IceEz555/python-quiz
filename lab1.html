@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1:แบบฝึกหัดทบทวน Python & Pandas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            color: #2563eb;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #6b7280;
+            font-size: 1.1rem;
+        }
+        /* Style for Card */
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 6px solid #2563eb;
+        }
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.4rem;
+            color: #1f2937;
+        }
+        .instruction {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        /* Style for Result Section */
+        .result-section {
+            background-color: #f8fafc;
+            border: 1px dashed #94a3b8;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .result-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #64748b;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .output-preview {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95rem;
+            color: #333;
+            white-space: pre-wrap; /* รักษารูปแบบบรรทัด */
+        }
+
+        /* Style for Code Block */
+        .code-block {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+            margin-bottom: 15px;
+        }
+
+        /* Buttons & Tags */
+        .btn-toggle {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Prompt', sans-serif;
+            font-size: 0.95rem;
+            transition: background 0.3s;
+            width: 100%;
+        }
+        .btn-toggle:hover {
+            background-color: #1d4ed8;
+        }
+        .answer-section {
+            margin-top: 15px;
+            display: none; 
+            border-top: 1px solid #e5e7eb;
+            padding-top: 15px;
+        }
+        .answer-title {
+            font-weight: 600;
+            color: #059669;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .tag-python { background-color: #ffe4e6; color: #be123c; }
+        .tag-pandas { background-color: #dbeafe; color: #1e40af; }
+
+        /* Mockup Table for Pandas */
+        .mock-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            background: white;
+        }
+        .mock-table th, .mock-table td {
+            border: 1px solid #e2e8f0;
+            padding: 6px;
+            text-align: right;
+        }
+        .mock-table th {
+            background-color: #f1f5f9;
+            text-align: center;
+            font-weight: bold;
+        }
+        .mock-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        .index-col {
+            font-weight: bold;
+            text-align: left !important;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+     <div class="nav-bar">
+        <a href="index.html" class="btn-home">← กลับหน้าเมนูหลัก</a>
+    </div>
+    <header>
+        <h1>Lab 1: แบบฝึกหัดทบทวน</h1>
+        <div class="subtitle">Python พื้นฐานและการวิเคราะห์ข้อมูลด้วย Pandas</div>
+    </header>
+
+    <div class="card">
+        <span class="tag tag-python">Python Basic</span>
+        <h2>ข้อที่ 1: การรับค่าและแสดงผลข้อความ</h2>
+        <div class="instruction">
+            จงเขียนโปรแกรมรับค่า <b>"ชื่อ"</b> และ <b>"นามสกุล"</b> จากนั้นแสดงผลโดยนำมาต่อกันเป็นประโยค
+        </div>
+
+        <div class="result-section">
+            <div class="result-label">ตัวอย่างผลลัพธ์ (Output Example)</div>
+            <div class="output-preview">
+enter your name: Jhon
+enter your surname: Doe
+Fullname is Jhon Doe
+            </div>
+        </div>
+
+        <button class="btn-toggle" onclick="toggleAnswer('ans1')">ดูเฉลย / ซ่อนเฉลย</button>
+        <div id="ans1" class="answer-section">
+            <span class="answer-title">เฉลยโค้ด:</span>
+            <div class="code-block">
+name = input("enter your name: ")
+surname = input("enter your surname: ")
+
+print("Fullname is " + name + " " + surname)
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="tag tag-python">Python String</span>
+        <h2>ข้อที่ 2: การเข้าถึงข้อมูลใน String</h2>
+        <div class="instruction">
+            กำหนดให้ <code>a = "Apple"</code> จงเขียนคำสั่งเพื่อแสดงผล: <br>
+            1. ตัวแรก <br>
+            2. ตัวสุดท้าย <br>
+            3. ตัดคำเอาเฉพาะ "le"
+        </div>
+
+        <div class="result-section">
+            <div class="result-label">ตัวอย่างผลลัพธ์ (Output Example)</div>
+            <div class="output-preview">
+A
+e
+le
+            </div>
+        </div>
+
+        <button class="btn-toggle" onclick="toggleAnswer('ans2')">ดูเฉลย / ซ่อนเฉลย</button>
+        <div id="ans2" class="answer-section">
+            <span class="answer-title">เฉลยโค้ด:</span>
+            <div class="code-block">
+a = "Apple"
+print(a[0])    
+print(a[-1])   
+print(a[3:])
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="tag tag-python">String Formatting</span>
+        <h2>ข้อที่ 3: การจัดรูปแบบการแสดงผล (%)</h2>
+        <div class="instruction">
+            กำหนด: <code>name="Apivit"</code>, <code>id="65502100109-5"</code>, <code>grade=3.53</code><br>
+            จงแสดงผลชื่อคู่กับรหัส และชื่อคู่กับเกรด (ทศนิยม 2 ตำแหน่ง)
+        </div>
+
+        <div class="result-section">
+            <div class="result-label">ตัวอย่างผลลัพธ์ (Output Example)</div>
+            <div class="output-preview">
+Hi, Apivit ID is 65502100109-5
+Hi, Apivit grade is 3.53
+            </div>
+        </div>
+
+        <button class="btn-toggle" onclick="toggleAnswer('ans3')">ดูเฉลย / ซ่อนเฉลย</button>
+        <div id="ans3" class="answer-section">
+            <span class="answer-title">เฉลยโค้ด:</span>
+            <div class="code-block">
+name = "Apivit"
+id = "65502100109-5"
+grade = 3.530
+
+print("Hi, %s ID is %s" % (name, id))
+print("Hi, %s grade is %.2f" % (name, grade))
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="tag tag-pandas">Pandas Pivot Table</span>
+        <h2>ข้อที่ 4: Pivot Table เบื้องต้น</h2>
+        <div class="instruction">
+            จงสร้าง Pivot Table เพื่อหา <b>ค่าเฉลี่ย (mean)</b> ของ Quantity และ total แยกตาม StockCode
+        </div>
+
+        <div class="result-section">
+            <div class="result-label">ตัวอย่างผลลัพธ์ (ตารางจำลอง)</div>
+            <table class="mock-table">
+                <thead>
+                    <tr>
+                        <th>StockCode</th>
+                        <th>Quantity</th>
+                        <th>total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="index-col">10002</td><td>14.26</td><td>353.94</td></tr>
+                    <tr><td class="index-col">10080</td><td>20.62</td><td>168.62</td></tr>
+                    <tr><td class="index-col">10120</td><td>6.43</td><td>45.93</td></tr>
+                    <tr><td class="index-col">...</td><td>...</td><td>...</td></tr>
+                    <tr><td class="index-col">gift_0001_20</td><td>2.00</td><td>568.20</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button class="btn-toggle" onclick="toggleAnswer('ans4')">ดูเฉลย / ซ่อนเฉลย</button>
+        <div id="ans4" class="answer-section">
+            <span class="answer-title">เฉลยโค้ด:</span>
+            <div class="code-block">
+pd.pivot_table(df, 
+               values=["total", "Quantity"], 
+               index=["StockCode"], 
+               aggfunc="mean")
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="tag tag-pandas">Advanced Pandas</span>
+        <h2>ข้อที่ 5: Pivot Table แบบมีเงื่อนไข</h2>
+        <div class="instruction">
+            กรองเฉพาะยอด <b>total >= 1000</b> แล้วหา <b>ผลรวม (sum)</b> แยกตาม Country และ CustomerID
+        </div>
+
+        <div class="result-section">
+            <div class="result-label">ตัวอย่างผลลัพธ์ (ตารางจำลอง)</div>
+            <table class="mock-table">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>CustomerID</th>
+                        <th>total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="index-col">Australia</td><td class="index-col">12386.0</td><td>10799</td></tr>
+                    <tr><td class="index-col"></td><td class="index-col">12388.0</td><td>61747</td></tr>
+                    <tr><td class="index-col">...</td><td class="index-col">...</td><td>...</td></tr>
+                    <tr><td class="index-col">United Kingdom</td><td class="index-col">18278.0</td><td>2020</td></tr>
+                    <tr><td class="index-col"></td><td class="index-col">18287.0</td><td>37331</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button class="btn-toggle" onclick="toggleAnswer('ans5')">ดูเฉลย / ซ่อนเฉลย</button>
+        <div id="ans5" class="answer-section">
+            <span class="answer-title">เฉลยโค้ด:</span>
+            <div class="code-block">
+pd.pivot_table(df[df['total'] >= 1000], 
+               index=["Country", "CustomerID"], 
+               values="total", 
+               aggfunc="sum")
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleAnswer(id) {
+        var x = document.getElementById(id);
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>

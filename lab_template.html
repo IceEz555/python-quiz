@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab X: ชื่อหัวข้อบทเรียน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Prompt', sans-serif; background-color: #f3f4f6; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        
+        /* Navbar */
+        .nav-bar { margin-bottom: 30px; }
+        .btn-home { text-decoration: none; color: #2563eb; font-weight: 600; display: inline-flex; align-items: center; }
+        .btn-home:hover { text-decoration: underline; }
+        
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { color: #2563eb; margin: 10px 0; }
+        
+        /* Card & Code Styles (เหมือนเดิม) */
+        .card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 30px; border-left: 6px solid #2563eb; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .btn-toggle { background-color: #2563eb; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; width: 100%; font-family: 'Prompt', sans-serif; }
+        .btn-toggle:hover { background-color: #1d4ed8; }
+        .code-block { background-color: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-family: 'Courier New', monospace; overflow-x: auto; }
+        .answer-section { display: none; margin-top: 15px; border-top: 1px solid #eee; padding-top: 15px; }
+        .result-section { background-color: #f8fafc; border: 1px dashed #94a3b8; border-radius: 8px; padding: 15px; margin-bottom: 15px; font-family: monospace;}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="nav-bar">
+        <a href="index.html" class="btn-home">← กลับหน้าเมนูหลัก</a>
+    </div>
+
+    <header>
+        <h1>Lab X: ใส่ชื่อหัวข้อที่นี่</h1>
+        <div style="color: #666;">คำอธิบายสั้นๆ ของบทเรียนนี้</div>
+    </header>
+
+    <div class="card">
+        <h2>ข้อที่ 1: ชื่อโจทย์</h2>
+        <p>รายละเอียดคำสั่ง...</p>
+
+        <div class="result-section">
+            <strong>Expected Output:</strong><br>
+            Hello World
+        </div>
+
+        <button class="btn-toggle" onclick="toggleAnswer('ans1')">ดูเฉลย / ซ่อนเฉลย</button>
+        <div id="ans1" class="answer-section">
+            <div class="code-block">
+print("Hello World")
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleAnswer(id) {
+        var x = document.getElementById(id);
+        if (x.style.display === "block") x.style.display = "none";
+        else x.style.display = "block";
+    }
+</script>
+
+</body>
+</html>
